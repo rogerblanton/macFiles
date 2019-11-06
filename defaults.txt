@@ -1,0 +1,2 @@
+defaults write com.apple.screencapture location ~/Screenshots
+chflags nohidden ~/Library/
