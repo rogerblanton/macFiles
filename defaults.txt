@@ -1,2 +1,16 @@
 defaults write com.apple.screencapture location ~/Screenshots
 chflags nohidden ~/Library/
+
+#add quit option to finder
+defaults write com.apple.finder QuitMenuItem -bool true && killall Finder
+
+#always show the expanded printing dialog
+defaults write -g PMPrintingExpandedStateForPrint -bool true
+
+#remove dialog that warns me about opening stuff I download
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+defaults write com.apple.ActivityMonitor IconType -int 5
